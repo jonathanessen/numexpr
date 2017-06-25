@@ -330,7 +330,7 @@ def getConstants(ast):
     for a in ast.allOf('constant'):
         const_map[(a.astKind, a.value)] = a
     ordered_constants = const_map.keys()
-    ordered_constants.sort()
+    # ordered_constants.sort()
     constants_order = [const_map[v] for v in ordered_constants]
     constants = [convertConstantToKind(a.value, a.astKind)
                  for a in constants_order]
